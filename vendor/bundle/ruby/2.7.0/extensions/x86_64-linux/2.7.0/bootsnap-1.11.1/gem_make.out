@@ -1,0 +1,15 @@
+current directory: /home/shuta/job_hunting_calendar/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.11.1/ext/bootsnap
+/home/shuta/.rbenv/versions/2.7.3/bin/ruby -I /home/shuta/.rbenv/versions/2.7.3/lib/ruby/2.7.0 -r ./siteconf20220324-21181-1orkuvp.rb extconf.rb
+creating Makefile
+
+current directory: /home/shuta/job_hunting_calendar/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.11.1/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/shuta/job_hunting_calendar/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.11.1/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/shuta/job_hunting_calendar/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.11.1/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20220324-21181-xxzmyk/bootsnap

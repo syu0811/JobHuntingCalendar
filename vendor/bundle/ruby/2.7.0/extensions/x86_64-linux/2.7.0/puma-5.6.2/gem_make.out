@@ -1,0 +1,20 @@
+current directory: /home/shuta/job_hunting_calendar/vendor/bundle/ruby/2.7.0/gems/puma-5.6.2/ext/puma_http11
+/home/shuta/.rbenv/versions/2.7.3/bin/ruby -I /home/shuta/.rbenv/versions/2.7.3/lib/ruby/2.7.0 -r ./siteconf20220324-21181-1scabiq.rb extconf.rb
+checking for BIO_read() in -lcrypto... no
+checking for BIO_read() in -llibeay32... no
+** Puma will be compiled without SSL support
+creating Makefile
+
+current directory: /home/shuta/job_hunting_calendar/vendor/bundle/ruby/2.7.0/gems/puma-5.6.2/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: /home/shuta/job_hunting_calendar/vendor/bundle/ruby/2.7.0/gems/puma-5.6.2/ext/puma_http11
+make "DESTDIR="
+compiling http11_parser.c
+compiling mini_ssl.c
+compiling puma_http11.c
+linking shared-object puma/puma_http11.so
+
+current directory: /home/shuta/job_hunting_calendar/vendor/bundle/ruby/2.7.0/gems/puma-5.6.2/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20220324-21181-1gl4ncs/puma
