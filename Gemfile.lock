@@ -87,6 +87,15 @@ GEM
     childprocess (4.1.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    devise (4.8.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
+    devise-i18n (1.10.2)
+      devise (>= 4.8.0)
+    devise-i18n-views (0.3.7)
     diff-lcs (1.5.0)
     erb2haml (0.1.5)
       html2haml
@@ -141,6 +150,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.3-x86_64-linux)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     parallel (1.22.0)
     parser (3.1.1.0)
       ast (~> 2.4.1)
@@ -192,6 +202,9 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.2.1)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rexml (3.2.5)
     rspec-core (3.11.0)
       rspec-support (~> 3.11.0)
@@ -265,6 +278,8 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -295,6 +310,9 @@ DEPENDENCIES
   bootstrap (~> 4.3.1)
   byebug
   capybara (>= 3.26)
+  devise
+  devise-i18n
+  devise-i18n-views
   erb2haml
   factory_bot_rails
   haml-rails
@@ -321,7 +339,7 @@ DEPENDENCIES
   webpacker (~> 5.0)
 
 RUBY VERSION
-   ruby 2.7.3p183
+   ruby 2.7.5p203
 
 BUNDLED WITH
    2.3.9

@@ -28,6 +28,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'erb2haml'
 gem 'haml-rails'
 
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 gem 'rails-i18n'
 
 gem 'bootstrap', '~> 4.3.1'
