@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
-    :sessions => 'users/sessions'   
-  } 
+    :sessions => 'users/sessions',
+  }
 
   devise_scope :user do
     get "user/:id", :to => "users/registrations#detail"
@@ -12,4 +12,8 @@ Rails.application.routes.draw do
     get "logout", :to => "users/sessions#destroy"
   end
 
+  resources :tops, only: [:index]
+  resources :calendars, only: [:show]
+
+  root "tops#index"
 end
