@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :tops, only: [:index]
+  resources :calendars, only: [:show]
 
   root "tops#index"
 end
