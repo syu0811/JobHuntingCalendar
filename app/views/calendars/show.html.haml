@@ -2,3 +2,30 @@
   カレンダー
 = current_user.email
 = link_to "ログアウト", destroy_user_session_path, method: :delete
+
+
+.calendar
+  .container-calendar
+    %h4#monthAndYear
+    .button-container-calendar
+      %button#previous{onclick: "previous()"} ‹
+      %button#next{onclick: "next()"} ›
+    %table#calendar.table-calendar{"data-lang" => "ja"}
+      %thead#thead-month
+      %tbody#calendar-body
+    .footer-container-calendar
+      %label{for: "month"} 日付指定：
+      %select#month{onchange: "jump()"}
+        %option{value: "0"} 1月
+        %option{value: "1"} 2月
+        %option{value: "2"} 3月
+        %option{value: "3"} 4月
+        %option{value: "4"} 5月
+        %option{value: "5"} 6月
+        %option{value: "6"} 7月
+        %option{value: "7"} 8月
+        %option{value: "8"} 9月
+        %option{value: "9"} 10月
+        %option{value: "10"} 11月
+        %option{value: "11"} 12月
+      %select#year{onchange: "jump()"}
