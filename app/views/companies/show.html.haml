@@ -17,6 +17,6 @@
       - @companies.each do |company|
         %tr
           %td
-            = "#{company.name} : #{company.user.email}"
+            = "#{company.name} : #{company.user.id}"
           %td
             = link_to '削除', company_path(company.id), method: :delete, data: {confirm: '削除しますか？'}, class: 'btn btn-danger'

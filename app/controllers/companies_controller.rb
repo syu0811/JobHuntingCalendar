@@ -1,8 +1,8 @@
 class CompaniesController < ApplicationController
-  before_action :sign_in_required, only: [:index, :new, :creatt, :destroy]
+  before_action :sign_in_required, only: [:show, :new, :creatt, :destroy]
 
-  def index
-    @companies = Company.where(user: current_user)
+  def show
+    @companies = Company.where(user: params[:id])
   end
 
   def new
@@ -12,7 +12,7 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new(company_params)
     if @company.save
-      redirect_to companies_path, notice: '作成に成功'
+      redirect_to company_path(current_user), notice: '作成に成功'
     else
       render :new
     end
