@@ -1,8 +1,8 @@
 class CompaniesController < ApplicationController
-  before_action :sign_in_required, only: [:index, :new]
+  before_action :sign_in_required, only: [:index, :new, :creatt, :destroy]
 
   def index
-    @companies = Company.all
+    @companies = Company.where(user: current_user)
   end
 
   def new
@@ -15,6 +15,15 @@ class CompaniesController < ApplicationController
       redirect_to companies_path, notice: '作成に成功'
     else
       render :new
+    end
+  end
+
+  def destroy
+    @company = Company.find(params[:id])
+    if @company.destroy!
+      redirect_to companies_path, notice: '削除に成功'
+    else
+      redirect_to companies_path, notice: '削除に失敗'
     end
   end
 
