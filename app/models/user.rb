@@ -6,7 +6,8 @@ class User < ApplicationRecord
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
 
-  has_many :topics
+  has_many :companies
+  has_many :events
 
   validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
 end

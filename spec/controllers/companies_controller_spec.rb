@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe CompaniesController, type: :controller do
   describe "ログインしている場合" do
-    let!(:company) { create(:company) }
+    let(:company) { create(:company) }
     let(:login_user) { create(:user) }
 
     before do
