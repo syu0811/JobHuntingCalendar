@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   resources :tops, only: [:index]
   resources :calendars, only: [:show]
+  resources :companies, only: [:index, :new, :create, :destroy]
 
   root "tops#index"
 end

@@ -1,6 +1,7 @@
 %h1
   カレンダー
 = current_user.email
+= link_to "会社一覧", companies_path
 = link_to "ログアウト", destroy_user_session_path, method: :delete
 
 #calendar

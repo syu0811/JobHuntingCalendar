@@ -1,0 +1,7 @@
+%h1
+  会社一覧
+
+= link_to "追加", new_company_path
+
+- @companies.each do |company|
+  = "#{company.name} : #{company.user.email}"
