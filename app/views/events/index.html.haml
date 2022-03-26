@@ -1,0 +1,25 @@
+%h1
+  イベント
+
+- if @events.count == 0
+  登録されたイベントはありません
+  %br
+  = link_to "イベント追加", new_event_path
+- else
+  %table.table
+    %tr
+      = link_to "イベント追加", new_event_path
+    %thead
+      %tr
+        %th.col-7
+          イベント
+        %th
+          削除
+    %tbody
+      - @events.each do |event|
+        %tr
+          %td
+            = "#{event.title} : #{event.year}年 #{event.month}月 #{event.day}日 : url#{event.url}"
+          %td
+            = link_to '削除', event_path(event.id), method: :delete, data: {confirm: '削除しますか？'}, class: 'btn btn-danger'
+

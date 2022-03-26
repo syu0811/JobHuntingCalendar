@@ -6,7 +6,7 @@ RSpec.describe TopsController, type: :controller do
   before do
     sign_in login_user
   end
-  
+
   describe "/tops" do
     it "ステータス OK が返ってくる" do
       get :index

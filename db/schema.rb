@@ -29,9 +29,11 @@ ActiveRecord::Schema.define(version: 2022_03_25_222716) do
     t.integer "month", null: false
     t.integer "day", null: false
     t.string "url"
+    t.bigint "company_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_events_on_company_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -50,5 +52,6 @@ ActiveRecord::Schema.define(version: 2022_03_25_222716) do
   end
 
   add_foreign_key "companies", "users"
+  add_foreign_key "events", "companies"
   add_foreign_key "events", "users"
 end

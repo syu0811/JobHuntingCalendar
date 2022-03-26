@@ -5,6 +5,7 @@ FactoryBot.define do
     month { 3 }
     day { 30 }
     url { 'https://www.google.com/' }
+    association :company
     association :user
   end
 end

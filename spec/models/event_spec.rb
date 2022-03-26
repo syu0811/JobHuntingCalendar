@@ -3,10 +3,11 @@ require 'rails_helper'
 RSpec.describe Event, type: :model do
   describe 'Validation' do
     let(:user) { create(:user) }
+    let(:company) { create(:company) }
 
     context '正常系' do
       it "成功する" do
-        event = build(:event, user: user)
+        event = build(:event, user: user, company: company)
         expect(event).to be_valid
       end
     end
@@ -22,6 +23,12 @@ RSpec.describe Event, type: :model do
         event = build(:event, user: nil)
         event.valid?
         expect(event.errors[:user]).to include('を入力してください')
+      end
+
+      it "company_idが無ければ失敗する" do
+        event = build(:event, company: nil)
+        event.valid?
+        expect(event.errors[:company]).to include('を入力してください')
       end
 
       it "titleが30文字以内でないと失敗する" do

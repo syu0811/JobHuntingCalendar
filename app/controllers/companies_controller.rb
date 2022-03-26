@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-  before_action :sign_in_required, only: [:show, :new, :creatt, :destroy]
+  before_action :sign_in_required, only: [:show, :new, :create, :destroy]
 
   def show
     @companies = Company.where(user: params[:id])
