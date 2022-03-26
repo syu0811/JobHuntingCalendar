@@ -2,4 +2,8 @@
   カレンダー
 = current_user.email
 
+#events{"data-events" => "#{@events.to_json}"}
 #calendar
+
+:javascript
+  calendarDraw();
