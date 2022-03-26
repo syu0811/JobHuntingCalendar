@@ -72,6 +72,13 @@ RSpec.describe Event, type: :model do
         event.valid?
         expect(event.errors[:day]).to include('は一覧にありません')
       end
+
+      it "同じ年月日にイベントを追加しようとすると失敗する" do
+        create(:event, year: 2022, month: 3, day: 30, user: user)
+        event = build(:event, year: 2022, month: 3, day: 30, user: user)
+        event.valid?
+        expect(event.errors[:day]).to include('はすでに存在します')
+      end
     end
   end
 end
