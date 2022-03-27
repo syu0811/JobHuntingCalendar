@@ -10,6 +10,30 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require_directory .
  *= require_self
  */
+
+@import '~bootstrap/scss/bootstrap';
+@import "./calendar.scss";
+@import "./navbar.scss";
+@import "./animation.scss";
+@import "./flash.scss";
+
+$page-bg: #f5ebdf;
+$light-blue: #3599FF;
+$bright-blue: #68B3FF;
+$light-gray: #999;
+//$curve: cubic-bezier(0, 0, 0.52, 1.11);
+$curve: linear;
+
+body {
+  font-family: Roboto;
+  background: $page-bg;
+
+  a {
+    color: $light-blue;
+    font-size: 1em;
+    text-decoration: none;
+  }
+};

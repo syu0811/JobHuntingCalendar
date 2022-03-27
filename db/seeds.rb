@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create(email: "test@example.com", password: "password")
+User.create(email: "guest@example.com", password: "password")
+
+Company.create(name: "テスト株式会社", user: User.first)
+
+Event.create(title: "テスト面接", year: 2022, month: 3, day: 31, url: "https://www.google.com/", user: User.first, company: Company.first)

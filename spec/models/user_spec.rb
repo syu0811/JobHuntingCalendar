@@ -16,6 +16,12 @@ RSpec.describe User, type: :model do
         expect(user.errors[:email]).to include('を入力してください')
       end
 
+      it "emailが正しいフォーマットでなければ失敗する" do
+        user = build(:user, email: "aaa")
+        user.valid?
+        expect(user.errors[:email]).to include('は不正な値です')
+      end
+
       it "passwordが6文字以上ないと失敗する" do
         user = build(:user, password: "a")
         user.valid?
