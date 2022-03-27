@@ -1,0 +1,24 @@
+%h1
+  会社一覧
+
+- if @companies.count == 0
+  登録された会社はありません
+  %br
+  = link_to "追加", new_company_path
+- else
+  %table.table
+    %tr
+      = link_to "追加", new_company_path
+    %thead
+      %tr
+        %th
+          会社名
+        %th
+          削除
+    %tbody
+      - @companies.each do |company|
+        %tr
+          %td
+            = "#{company.name}"
+          %td
+            = link_to '削除', company_path(company.id), method: :delete, data: {confirm: '削除しますか？'}, class: 'btn btn-danger'

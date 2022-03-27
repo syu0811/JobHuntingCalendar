@@ -1,6 +1,9 @@
 %h1
   カレンダー
 = current_user.email
-= link_to "ログアウト", destroy_user_session_path, method: :delete
 
+#events{"data-events" => "#{@events.to_json}"}
 #calendar
+
+:javascript
+  calendarDraw();

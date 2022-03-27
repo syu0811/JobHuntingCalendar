@@ -1,10 +1,17 @@
-window.onload = function() {
-  var events = [
-    {'Date': new Date(2022, 2, 7), 'Title': '資格取得セミナー午後2時からセンタービル'},
-    {'Date': new Date(2022, 2, 18), 'Title': '●●イベント開催', 'Link': 'https://yahoo.co.jp/'},
-    {'Date': new Date(2022, 2, 27), 'Title': '〇〇企画創業20周年記念', 'Link': 'https://www.google.com/'},
-  ];
+window.insertEvent = function(year, month, day, title, url) {
+  if(url == ""){
+    events.push({'Date': new Date(year, month - 1, day), 'Title': title})
+  } else {
+    events.push({'Date': new Date(year, month - 1, day), 'Title': title, 'Link': url})
+  }
+}
 
+window.calendarDraw = function() {
+  events = [];
+  var element = $('#events').data('events');
+  for(var i = 0; i < element.length; i++){
+    insertEvent(element[i].year, element[i].month, element[i].day, element[i].title, element[i].url)
+  }
   var settings = {};
   var element = document.getElementById('calendar');
   calendar(element, events, settings);

@@ -1,0 +1,9 @@
+%nav.navbar.navbar-expand.navbar-dark
+  = link_to root_path do
+    .rogo-img
+  .favorite
+    - if user_signed_in?
+      = link_to "カレンダー", calendar_path(current_user)
+      = link_to "イベント", events_path
+      = link_to "会社一覧", company_path(current_user)
+      = link_to "ログアウト", destroy_user_session_path, method: :delete
