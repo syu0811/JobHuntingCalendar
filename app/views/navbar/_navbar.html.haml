@@ -1,5 +1,7 @@
 #container
   %ul#menu
+    %li
+      = link_to "JobHuntingCalendar", root_path
     - if user_signed_in?
       %li
         = link_to "カレンダー", calendar_path(current_user)
