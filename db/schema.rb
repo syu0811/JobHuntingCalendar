@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 2022_03_25_222716) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name", null: false
+    t.string "home_page_url"
+    t.string "communication_url"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -28,6 +30,8 @@ ActiveRecord::Schema.define(version: 2022_03_25_222716) do
     t.integer "year", null: false
     t.integer "month", null: false
     t.integer "day", null: false
+    t.integer "hour", null: false
+    t.integer "minute", null: false
     t.string "url"
     t.bigint "company_id", null: false
     t.bigint "user_id", null: false

@@ -79,6 +79,30 @@ RSpec.describe Event, type: :model do
         event.valid?
         expect(event.errors[:day]).to include('はすでに存在します')
       end
+
+      it "hourが無ければ失敗する" do
+        event = build(:event, hour: nil)
+        event.valid?
+        expect(event.errors[:hour]).to include('を入力してください')
+      end
+
+      it "hourの値が指定の範囲外であれば失敗する" do
+        event = build(:event, hour: 0)
+        event.valid?
+        expect(event.errors[:hour]).to include('は一覧にありません')
+      end
+
+      it "minuteが無ければ失敗する" do
+        event = build(:event, minute: nil)
+        event.valid?
+        expect(event.errors[:minute]).to include('を入力してください')
+      end
+
+      it "minuteの値が指定の範囲外であれば失敗する" do
+        event = build(:event, minute: 100)
+        event.valid?
+        expect(event.errors[:minute]).to include('は一覧にありません')
+      end
     end
   end
 end

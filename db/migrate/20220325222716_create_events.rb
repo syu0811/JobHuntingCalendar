@@ -5,6 +5,8 @@ class CreateEvents < ActiveRecord::Migration[6.1]
       t.integer :year, null: false
       t.integer :month, null: false
       t.integer :day, null: false
+      t.integer :hour, null: false
+      t.integer :minute, null: false
       t.string :url
       t.references :company, null: false, foreign_key: true
       t.references :user, null: false, foreign_key: true
