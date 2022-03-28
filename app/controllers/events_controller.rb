@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :sign_in_required, only: [:index, :new, :create, :destroy]
 
   def index
-    @events = Event.where(user: current_user)
+    @events = Event.where(user: current_user).order(year: :desc).order(month: :desc).order(day: :desc)
   end
 
   def new
