@@ -30,7 +30,7 @@ class CompaniesController < ApplicationController
   private
 
   def company_params
-    @params = params.require(:company).permit(:name)
+    @params = params.require(:company).permit(:name, :home_page_url, :communication_url)
     @params[:user_id] = current_user.id
     @params
   end

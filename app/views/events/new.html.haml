@@ -21,6 +21,11 @@
             月
             = f.select :day, options_for_select((1..31).to_a), { }, { }
             日
+          .select-day
+            = f.select :hour, options_for_select((1..24).to_a), { }, { }
+            時
+            = f.select :minute, options_for_select((0..60).to_a), { }, { }
+            分
           .select-company
             = f.label "企業"
             = f.collection_select :company_id, Company.where(user: current_user), :id, :name, include_blank: "選択して下さい"

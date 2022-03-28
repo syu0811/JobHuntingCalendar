@@ -31,7 +31,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    @params = params.require(:event).permit(:title, :year, :month, :day, :url, :company_id)
+    @params = params.require(:event).permit(:title, :year, :month, :day, :hour, :minute, :url, :company_id)
     @params[:user_id] = current_user.id
     @params
   end

@@ -9,6 +9,6 @@
 User.create(email: "test@example.com", password: "password")
 User.create(email: "guest@example.com", password: "password")
 
-Company.create(name: "テスト株式会社", user: User.first)
+Company.create(name: "テスト株式会社", user: User.first, home_page_url: "https://www.home.com/", communication_url: "https://www.communication.com/")
 
-Event.create(title: "テスト面接", year: 2022, month: 3, day: 31, url: "https://www.google.com/", user: User.first, company: Company.first)
+Event.create(title: "テスト面接", year: 2022, month: 3, day: 31, hour: 7, minute: 0, url: "https://www.google.com/", user: User.first, company: Company.first)

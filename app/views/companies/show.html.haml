@@ -16,11 +16,25 @@
         %th
           企業名
         %th
+          ホームページURL 
+        %th
+          コミュニケーションURL
+        %th
           削除
     %tbody
       - @companies.each do |company|
         %tr
           %td
             = "#{company.name}"
+          %td
+            - if company.home_page_url.nil?
+              = '---'
+            - else
+              = "#{company.home_page_url}"
+          %td
+            - if company.communication_url.nil?
+              = '---'
+            - else
+              = "#{company.communication_url}"
           %td
             = link_to '削除', company_path(company.id), method: :delete, data: {confirm: '削除しますか？'}, class: 'btn btn-danger'

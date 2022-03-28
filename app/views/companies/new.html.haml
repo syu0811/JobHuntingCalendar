@@ -16,4 +16,10 @@
               = f.label "企業名"
               = f.text_field :name, class: 'form-control text-center'
             .form-group
+              = f.label "ホームページのURL"
+              = f.text_field :home_page_url, class: 'form-control text-center'
+            .form-group
+              = f.label "やり取りを行っているURL"
+              = f.text_field :communication_url, class: 'form-control text-center'
+            .form-group
               = f.submit nil, class: 'btn btn-success'
