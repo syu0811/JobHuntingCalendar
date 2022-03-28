@@ -1,18 +1,20 @@
 %h1
-  会社一覧
+  企業
+
+.add-button
+  = link_to "企業追加", new_company_path
+%br
 
 - if @companies.count == 0
-  登録された会社はありません
+  登録された企業はありません
   %br
-  = link_to "追加", new_company_path
+  
 - else
   %table.table-design
-    %tr
-      = link_to "追加", new_company_path
     %thead
       %tr
         %th
-          会社名
+          企業名
         %th
           削除
     %tbody

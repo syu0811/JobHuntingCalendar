@@ -1,0 +1,25 @@
+.add-button{
+  a {
+    align-items: center;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    width: 300px;
+    color: #2285b1;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+  }
+
+  a::after{
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #2285b1;
+    border-right: 3px solid #2285b1;
+  }
+
+  a:hover {
+    color: #333333;
+    text-decoration: none;
+    background-color: #9cd4ec;
+  }
+}
