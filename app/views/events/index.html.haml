@@ -1,20 +1,19 @@
 %h1
   イベント
 
+.add-button
+  = link_to "イベント追加", new_event_path
+%br
 - if @events.count == 0
   登録されたイベントはありません
-  %br
-  = link_to "イベント追加", new_event_path
 - else
-  %table.table
-    %tr
-      = link_to "イベント追加", new_event_path
+  %table.table-design
     %thead
       %tr
         %th
           タイトル
         %th
-          会社名
+          企業名
         %th
           年月日
         %th

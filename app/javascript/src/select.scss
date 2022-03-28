@@ -1,0 +1,33 @@
+.select-day {
+  select {
+    width: 30%;
+    max-width: 320px;
+    height: 50px;
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-size: 32px;
+    line-height: 1.75;
+    color: #333;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    text-align: center;
+  }
+}
+
+.select-company {
+  select {
+    width: 100%;
+    max-width: 320px;
+    height: 50px;
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-size: 32px;
+    line-height: 1.75;
+    color: #333;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    text-align: center;
+  }
+}

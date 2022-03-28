@@ -2,7 +2,7 @@ class CompaniesController < ApplicationController
   before_action :sign_in_required, only: [:show, :new, :create, :destroy]
 
   def show
-    @companies = Company.where(user: params[:id])
+    @companies = Company.where(user: params[:id]).order(:name)
   end
 
   def new

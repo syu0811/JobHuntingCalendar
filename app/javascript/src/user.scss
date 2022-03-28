@@ -1,0 +1,18 @@
+.contents {
+  padding: 0px 100px;
+
+  &__container {
+    background-color: rgb(208, 241, 245);
+    border-radius: 20px;
+    padding: 30px 100px;
+    text-align: center;
+  }
+}
+
+main {
+  flex: 1;
+}
+
+.main {
+  padding-top: 40px;
+}

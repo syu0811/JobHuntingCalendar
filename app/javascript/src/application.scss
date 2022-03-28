@@ -19,21 +19,11 @@
 @import "./navbar.scss";
 @import "./animation.scss";
 @import "./flash.scss";
+@import "./table.scss";
+@import "./button.scss";
+@import "./user.scss";
+@import "./select.scss";
 
-$page-bg: #f5ebdf;
-$light-blue: #3599FF;
-$bright-blue: #68B3FF;
-$light-gray: #999;
-//$curve: cubic-bezier(0, 0, 0.52, 1.11);
-$curve: linear;
-
-body {
-  font-family: Roboto;
-  background: $page-bg;
-
-  a {
-    color: $light-blue;
-    font-size: 1em;
-    text-decoration: none;
-  }
-};
+.text-center{
+  text-align: center;
+}
