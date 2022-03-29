@@ -5,12 +5,13 @@
   = link_to "企業追加", new_company_path
 %br
 
-- if @companies.count == 0
-  登録された企業はありません
-  %br
-  
-- else
-  %table.table-design
+%table.table-design
+  - if @companies.count == 0
+    %thead
+      %tr
+        %th
+          登録された企業はありません
+  - else
     %thead
       %tr
         %th
