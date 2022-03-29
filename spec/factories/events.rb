@@ -4,6 +4,8 @@ FactoryBot.define do
     year { 2022 }
     month { 3 }
     day { 30 }
+    hour { 7 }
+    minute { 0 }
     url { 'https://www.google.com/' }
     association :company
     association :user

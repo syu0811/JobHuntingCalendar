@@ -94,7 +94,7 @@ Metrics/BlockLength:
         - 'config/environments/development.rb'
         - 'config/routes.rb'
 Metrics/MethodLength:
-    Max: 12
+    Max: 15
     Exclude:
         - 'app/helpers/directory_tree_helper.rb'
 Metrics/ClassLength:

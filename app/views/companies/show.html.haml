@@ -5,16 +5,21 @@
   = link_to "企業追加", new_company_path
 %br
 
-- if @companies.count == 0
-  登録された企業はありません
-  %br
-  
-- else
-  %table.table-design
+%table.table-design
+  - if @companies.count == 0
+    %thead
+      %tr
+        %th
+          登録された企業はありません
+  - else
     %thead
       %tr
         %th
           企業名
+        %th
+          ホームページURL 
+        %th
+          コミュニケーションURL
         %th
           削除
     %tbody
@@ -22,5 +27,15 @@
         %tr
           %td
             = "#{company.name}"
+          %td
+            - if company.home_page_url.nil?
+              = '---'
+            - else
+              = "#{company.home_page_url}"
+          %td
+            - if company.communication_url.nil?
+              = '---'
+            - else
+              = "#{company.communication_url}"
           %td
             = link_to '削除', company_path(company.id), method: :delete, data: {confirm: '削除しますか？'}, class: 'btn btn-danger'
