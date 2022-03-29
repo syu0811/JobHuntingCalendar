@@ -60,7 +60,8 @@ PS> docker-compose up
 # コンテナを起動した状態
 PS> docker-compose exec web bash
 # 接続を確認後
-PS> rails db:create db:migrate db:seed
+$> EDITOR="vi" bin/rails credentials:edit
+$> rails db:create db:migrate db:seed
 ```
 
 ## 本番環境(不備あり)
@@ -80,6 +81,7 @@ PS> docker-compose up
 # コンテナを起動した状態
 PS> docker-compose exec web bash
 # 接続を確認後
+$> EDITOR="vi" bin/rails credentials:edit
 $> rails assets:precompile
 $> RAILS_ENV=production rails db:create db:migrate db:seed
 ```
