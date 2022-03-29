@@ -1,0 +1,1 @@
+CREATE ROLE job_hunting_calendar LOGIN CREATEDB PASSWORD 'password';

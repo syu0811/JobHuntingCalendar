@@ -21,9 +21,9 @@ class CompaniesController < ApplicationController
   def destroy
     @company = Company.find(params[:id])
     if @company.destroy!
-      redirect_to companies_path, notice: '削除に成功'
+      redirect_to company_path(current_user), notice: '削除に成功'
     else
-      redirect_to companies_path, notice: '削除に失敗'
+      redirect_to company_path(current_user), notice: '削除に失敗'
     end
   end
 
