@@ -86,5 +86,13 @@ $> rails assets:precompile
 $> RAILS_ENV=production rails db:create db:migrate db:seed
 ```
 
+## 初期データ
+
+- User
+  - test@example.com
+    - password
+  - guest@example.com
+    - password
+
 ## 開発者
 - syu0811
